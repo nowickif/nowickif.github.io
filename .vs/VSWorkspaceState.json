@@ -2,9 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\assets",
+    "\\assets\\img",
+    "\\assets\\img\\London",
     "\\assets\\vendor",
     "\\assets\\vendor\\bootstrap-icons"
   ],
-  "SelectedNode": "\\FSAE.html",
+  "SelectedNode": "\\assets\\img\\London",
   "PreviewInSolutionExplorer": false
 }
