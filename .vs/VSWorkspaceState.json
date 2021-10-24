@@ -2,11 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\assets",
+    "\\assets\\css",
     "\\assets\\img",
-    "\\assets\\img\\Waterbottle",
-    "\\assets\\vendor",
-    "\\assets\\vendor\\bootstrap-icons"
+    "\\assets\\img\\Grip",
+    "\\assets\\img\\Grip\\Cad"
   ],
-  "SelectedNode": "\\assets\\img\\Waterbottle",
+  "SelectedNode": "\\assets\\img\\Grip\\Cad\\1stiter.PNG",
   "PreviewInSolutionExplorer": false
 }
