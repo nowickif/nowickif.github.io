@@ -3,7 +3,9 @@
     "",
     "\\assets",
     "\\assets\\css",
-    "\\assets\\img"
+    "\\assets\\img",
+    "\\assets\\img\\Wave"
   ],
+  "SelectedNode": "\\assets\\img\\Wave\\final.png",
   "PreviewInSolutionExplorer": false
 }
