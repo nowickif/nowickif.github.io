@@ -97,7 +97,7 @@
                                   <p>Experts in the realm of art develop their knowledge for years and even so, many paintings by unknown artists have never been classified to a painter.</p>
 
                                   <p>These two constitute the motivation for the project:</p>
-                                  <p>- it takes years to develop art-related expertise</p>
+                                  <p>- it takes years to develop art-related expertise allowing to classify artwork</p>
                                   <p>- machine learning can contribute to some unresolved discussions</p>
                                   <p>In the project, we explored many image feature engineering techniques, applied various Machine Learning methods, and wrote scripts to perform art classification.</p>
 
@@ -166,11 +166,12 @@
                               <h3 class="h3">Feature Engineering Techniques</h3>
 
                               <div class="mb-12">
-                                  <p>To do engraving and laser cutting out of sheet acrylic, I needed to extract shape from a painting. Computer vision techniques were really helpful with that.</p>
-                                  <p>I wrote a script in Python which, using the OpenCV library, allows to get different levels of edges by trimming the thresholds of the Canny Edge technique.</p>
-                                  <p>In arriving at the actual painting I was going to fabricate, I explored different pieces of art and how well-defined edges are in those.</p>
-                                  <p>The photos on the left hand side indicate that edge extraction left messy pictures and also that for some paintings, defining the main shapes seemed impossible due to their complexity.</p>
-                                  <p>Considering this, I used a simplified version of the Great Wave off Kanagawa and then tidied up the image to have well-defined areas of the same color.</p>
+                                  <p>In this slide, there are Computer Vision techniques we used as well as their examples on the William Turner painting.</p>
+                                  <p>Overall, these methods can be divided into 3 main groups: gradient-based, color, and grayscale features.</p>
+                                  <p>Details about all the methods applied can be found within the paper itself.</p>
+                                  <p>In color features, the idea was that the same painter would usually use a similar set of colors, their tone or brightness.</p>
+                                  <p>With gradient-based features, the aim is to check whether a particular painter uses a lot of edges and how pronounced they are.</p>
+                                  <p>Finally, greyscale features examine pixel intensities and measure their consistency patterns across an image.</p>
                               </div>
 
                           </div>
@@ -192,12 +193,13 @@
                               <h3 class="h3">Shallow Machine Learning Results</h3>
 
                               <div class="mb-12">
-                                  <p>I explored a lot in terms of what colors I will be able to use in the painting. I look at different colors, raster settings, and number of passes.</p>
-                                  <p>In the process, for each color that I thought might be useful, I created engraved boxes with different raster settings to see what shades of different colors I can use.</p>
-                                  <p>Another area of exploration was ensuring that no piece is so thin that the laser cutter's size causes that piece to shrink so much that it disappears.</p>
-                                  <p>In the first iteration of the painting, I found that many the width of many pieces was to small, and so many white elements were missing.</p>
-                                  <p>In terms of the colors, I also learned a lot of how these shades of colors actually worked together. In turned out that even if there was a difference between engraved boxes, in the painting that was not always as apparent.</p>
-                                  <p>In addition, with some acrylic sheets, I was able to get a lot change in color with engraving, while with others not so much. Matching colors from a painting to those I can produce with laser cutting proved very interesting.</p>
+                                  <p>With all these features, we looked for the combinations of features that yields the highest classification accuracy.</p>
+                                  <p>Learning models used are presented on the slide. We used sklearn to implement them.</p>
+                                  <p>By default, the algorithms applied were evaluated by test accuracies in 5-fold cross-validation.</p>
+                                  <p>We strarted out with 3 artists and then having trained algorithms on all 255 possible combinations of features, we scaled the dataset up from 3 artists to 50 artists.</p>
+                                  <p>90% accuracy was the highest achieved for Paul Cezanne, Rembrandt, and van Gogh. The subset of features that yielded this accuracy was then applied to the rest of the dataset.</p>
+                                  <p>The graph on the right side of the slide shows that the accuracy starts at around 93% for 2 artists and drops to about 22% for all 50 artists.</p>
+                                  <p>In terms of methods, random forest initially performs best, but for more than 5 artists, it is Softmax Regressiion, KNN and SVM that have the highest accuracy.</p>
                               </div>
 
                           </div>
@@ -248,7 +250,7 @@
 
                       <div class="col-md-6 ml-auto" data-aos="fade-up" data-aos-delay="100">
                           <div class="sticky-content">
-                              <h3 class="h3">Final Product</h3>
+                              <h3 class="h3">Script Documentation</h3>
 
                               <div class="mb-12">
                                   <p>Here, on the right side is the final "painting" I created. It has really pronounced and vivid colors, and looks really composed.</p>
@@ -277,7 +279,7 @@
                   <div class="row align-items-center">
                           <div class="col-md-2 ml-auto" data-aos="fade-up" data-aos-delay="100">
                               <div class="sticky-content">
-                                  <h3 class="h3">Product Flyer</h3>
+                                  <h3 class="h3">Paper</h3>
                                   </div>
                               </div>
 
