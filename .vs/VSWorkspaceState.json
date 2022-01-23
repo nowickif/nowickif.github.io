@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\assets",
-    "\\assets\\css"
+    "\\assets\\css",
+    "\\assets\\img",
+    "\\assets\\img\\Art"
   ],
-  "SelectedNode": "\\work-single.html",
+  "SelectedNode": "\\FSAE.html",
   "PreviewInSolutionExplorer": false
 }
