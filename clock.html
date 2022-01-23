@@ -94,7 +94,7 @@
 
                               <div class="mb-12">
                                   <p>The 7-segment LED clock is a solo project I undertook in my Intro to Modern Making Class. It exposed me to new areas of making I have never explored, and left me with an amazing-looking programmable clock.</p>
-                                  <p>The clock shows the time by lighting up different segments of LED strips that area shaped as digits.</p>
+                                  <p>The clock has in-built LED stripes, segments of which from digits. These specific segments then light up based on what hour it is.</p>
                                   <p>In terms of the control of LED strips as well as timing, the clock has an Arduino Uno and an RTC module that I connected to a USB charging cube.</p>
                                   <p>It has different color schemes, light brightness, as well as hour formats - 12/24h - all of which are controlled by pushbuttons.</p>
                                   <p>It is power by plugging it into an electric outlet or connecting its USB to a laptop or power bank.</p>
@@ -114,26 +114,27 @@
               <div class="row align-items-stretch">
 
                   <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-
+                      <div class="sticky-content">
                           <h3 class="h3">Working Clock</h3>
 
                           <div class="mb-12">
-                              <p>In thinking about this project, I found a significant motivation to use an Arduino and 3D printing, and play around with electronics because I was never extensively exposed to them. to do something useful.</p>
+                              <p>In thinking about this project, I found a significant motivation to use an Arduino and 3D printing, and play around with electronics because I was never extensively exposed to them.</p>
                               <p>I really wanted my project to be something useful and browsing <a href="https://www.thingiverse.com/">Thingiverse</a>, I was really inspired by this a DIY project called the <a href="https://www.thingiverse.com/thing:3014572">Retro 7 segment clock</a>.</p>
                               <p>It looks absolutely amazing, particularly under dim lighting, and gives me a way to have fun with the clock's code.</p>
                               <p>In the time-lapse on the right side, the clock is in an automatic color change mode and exhibits the features of an actual clock - changes the hour.</p>
                           </div>
+                          </div>
 
-                  </div>
+                      </div>
 
-                  <div class="col-md-6 ml-auto" data-aos="fade-up">
-                      <div class="sticky-content">
-                          <video width="750" height="700" controls>
+                      <div class="col-md-6 ml-auto" data-aos="fade-up">
+
+                          <video width="700" height="700" controls>
                               <source src="assets/img/Clock/timelapse.mp4" type="video/mp4">
                               Your browser does not support the video tag.
                           </video>
+
                       </div>
-                  </div>
                   </div>
 
           </div>
@@ -158,7 +159,7 @@
 
                               <div class="mb-12">
                                   <p>Drawing considerable inspiration from the project I have found, I modelled all physical parts of the clock that were to be 3D printed.</p>
-                                  <p>In doing so, I had to take into account the large size of Arduino Uno as well as the physical constraints of Dremel 3D40 printers, which I used for my project.</p>
+                                  <p>In doing so, I had to take into account the large size of Arduino Uno as well as the physical constraints of Dremel 3D40 printers, which I used in my project.</p>
 
                               </div>
 
@@ -177,26 +178,19 @@
 
                       <div class="col-md-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
                           
-                              <h3 class="h3">Shallow Machine Learning Results</h3>
+                              <h3 class="h3">Casing</h3>
 
                               <div class="mb-12">
-                                  <p>The clock's RTC (real-time clock) module indicates the time and uses an additional battery that allows it to remember the current hour.</p>
-                                  <p>The clock has in-built LED stripes, segments of which light up based on what hour it is.</p>
                                   <p>The casing is 3D printed PLA plastic, whereas the diffusers (bright areas through which LED lights are visible) is resin cured with the SLA technology.</p>
-                                  <p>With all these features, we looked for the combinations of features that yields the highest classification accuracy.</p>
-                                  <p>Learning models used are presented on the slide. We used sklearn to implement them.</p>
-                                  <p>By default, the algorithms applied were evaluated by test accuracies in 5-fold cross-validation.</p>
-                                  <p>We strarted out with 3 artists and then having trained algorithms on all 255 possible combinations of features, we scaled the dataset up from 3 artists to 50 artists.</p>
-                                  <p>90% accuracy was the highest achieved for Paul Cezanne, Rembrandt, and van Gogh. The subset of features that yielded this accuracy was then applied to the rest of the dataset.</p>
-                                  <p>The graph on the right side of the slide shows that the accuracy starts at around 93% for 2 artists and drops to about 22% for all 50 artists.</p>
-                                  <p>In terms of methods, random forest initially performs best, but for more than 5 artists, it is Softmax Regressiion, KNN and SVM that have the highest accuracy.</p>
+                                  <p>It was a great experience to play around with different printing settings to see how that affects the quality and speed of the print.</p>
+                                  <p>I reckon there still are areas for improvement in terms of the fit and the edges of the prints, but am regardless happy with the final product.</p>
                               </div>
 
                           
                       </div>
                       <div class="col-md-7" data-aos="fade-up">
                           <div class="sticky-content">
-                              <img src="assets/img/Art/shallowML.jpg" alt="Image" class="img-fluid">
+                              <img src="assets/img/Clock/clock.jpg" alt="Image" class="img-fluid">
                               
                           </div>
                       </div>
@@ -211,19 +205,19 @@
                   <div class="row align-items-stretch">
                       <div class="col-md-6" data-aos="fade-up">
                           <div class="sticky-content">
-                              <img src="assets/img/Art/CNN.jpg" alt="Image" class="img-fluid">
+                              <img src="assets/img/Clock/inside.png" alt="Image" class="img-fluid">
                           </div>
                       </div>
                           <div class="col-md-6 ml-auto" data-aos="fade-up" data-aos-delay="100">
 
-                              <h3 class="h3">Convolutional Neural Network Results &amp; Comparison</h3>
+                              <h3 class="h3">Internal Structure &amp; Electronics</h3>
 
                               <div class="mb-12">
-                                  <p>In the other part of the project, we applied a convolutional neural network to compare the capabilities of shallow Machine Learning and Deep Learning in this task.</p>
-                                  <p>In terms of CNN's architecture, the one on the graph with 7 fully connected layers yielded us the highest accuracy.</p>
-                                  <p>The plot on the right-hand side of the slide shows a comparison between the best shallow ML algorithm and CNN. For a small number of artists, the performance is similar, but as there are more categories, CNN becomes superior.</p>
-                                  <p>For instance, for 2 artists, the accuracy is about the same but for 25 artists, CNN performs 13% better than shallow ML.</p>
-                                  <p>Then, for the whole dataset, CNN has 40% accuracy, which means it outperforms shallow ML by 18%.</p>
+                                  <p>In terms of the electronics, they included an Arduino Unom an RTC (real-time clock) module with a battery, a resistor, and a lot of wires. </p>
+                                  <p>The most difficult task proved to be soldering all the electronics with LEDs for the reason there is not a lot of space in-between the digit segments and LEDs.</p>
+
+                                  <p>Regardless, I found it really interesting and fulfilling to combine all these pieces together before uploading the code into the Arduino.</p>
+                                  
                               </div>
 
 
@@ -242,16 +236,14 @@
 
                       <div class="col-md-6 ml-auto" data-aos="fade-up" data-aos-delay="100">
                           <div class="sticky-content">
-                              <h3 class="h3">Findings &amp; Paper</h3>
+                              <h3 class="h3">Costs</h3>
 
                               <div class="mb-12">
-                                  <p>The main takeaways are:</p>
-                                  <p>1. CNN performed at least as good or significantly better than shallow Machine Learning algorithms.</p>
-                                  <p>2. In shallow Machine Learning, the performance drops steadily with an increasing number of artists, while for the CNN, the drop in accuracy slows down with more artists.</p>
-                                  <p>3. Interestingly, the highest accuracy shallow Machine Learning yielded was only for a subset of our Computer Vision techniques.</p>
-                                  <p>Self-reflection:</p>
-                                  <p>Overall, the project was extremely interesting and I have found it inspiring to explore how Computer Vision and different layers of a CNN interpret elements of art. The fact that it was art rather than pictures of objects made it challenging to adapt and interpret some of these techniques. Another thing that I particularly enjoyed was writing the script! It is quite powerful in how the dataset can analyzed and scaled, too.</p>
-                                  <p>The documentation can be found below and is here mostly to show just how extensive the code is. If you were interested in accessing the Jupyter notebook, I will be more than happy to share it!</p>
+                                  <p>The table on the right side includes the bill of materials used in the project and outlines costs incurred.</p>
+                                  <p>Overall, bar the 3D printing materials, the sum adds up to a reasonable $40.</p>
+                                  <p>However, the printing jobs significantly raise the estimated resources needed to produce such a clock.</p>
+                                  <p>In my case, I was fortunate to have the opportunity to use CMU's printers and to charge the school with any costs.</p>
+                                  <p>In future, I hope to do a spin-off of the clock using different, hopefully cheaper, material for the casing.</p>
                                   
                                   
                               </div>
@@ -260,7 +252,7 @@
                       </div>
                       <div class="col-md-6" data-aos="fade-up">
 
-                          <embed src="assets/img/Art/report.pdf" width="750px" height="800px" data-aos="fade-up" />
+                          <img src="assets/img/Clock/costs.png" alt="Image" class="img-fluid">
                       </div>
                   </div>
 
@@ -273,16 +265,7 @@
 
 
 
-                          <div class="container">
-                              <div class="row align-items-center" data-aos-delay="100">
-                                  <div class="col-md-6" data-aos="fade-up">
-                                      <h3 class="h3">Script Documentation</h3>
-                                      <embed src="assets/img/Art/documentation.pdf" width="750px" height="800px" data-aos="fade-up" />
-                                  </div>
-                                  
-                                  </div>
-
-                          </div>
+                         
 
 </section>
 
